@@ -1,7 +1,7 @@
 import express from 'express';
-import birthdays from './components/aniversariantes.js';
-import setor from './components/setor.js';
-import alphabetical from './components/ordenar.js';
+import birthdays from './modules/aniversariantes.js';
+import setor from './modules/setor.js';
+import alphabetical from './modules/ordenar.js';
 
 const app = express();
 
