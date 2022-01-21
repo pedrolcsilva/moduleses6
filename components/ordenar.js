@@ -1,4 +1,6 @@
-export default function alphabetical(funcionarios){
+import funcionarios from "../app.js";
+
+export default function alphabetical(req, res){
     let func = funcionarios.sort(function(a,b){
         if(a.nome < b.nome) {
             return -1;
@@ -6,5 +8,5 @@ export default function alphabetical(funcionarios){
             return true;
         }
     });
-    return func;
+    res.send(func)
 }

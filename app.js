@@ -72,10 +72,10 @@ app.get('/teste/:search/:esc', function(req, res) {
     let funcSearch = []
 
     if(req.params.esc == "data" && req.params.search != 'a'){
-        funcSearch = birthdays(req.params.search, funcionarios);
+        funcSearch = birthdays(req.params.search);
     }
     if(req.params.esc == "setor" && req.params.search != 'a'){
-        funcSearch = setor(req.params.search, funcionarios);
+        funcSearch = setor(req.params.search);
     }
 
     console.log(funcSearch)
@@ -87,16 +87,12 @@ app.get('/teste/:search/:esc', function(req, res) {
 
 });
 
-app.get('/alpha', function(req, res){
-    req.headers.funcionarios;
+app.get('/alpha', alphabetical)
 
-    let funcSearch = alphabetical(funcionarios)
-
-    res.send(funcSearch)
-})
-
-const server = app.listen(8000);
+const server = app.listen(8000, () => { 
+    console.log("http://localhost:8000");
+});
 
 const res = app.get('http://localhost:8000?' + funcionarios);
 
-console.log("http://localhost:8000");
+export default funcionarios;
