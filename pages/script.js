@@ -75,16 +75,6 @@ document.getElementById('alpha').addEventListener('click', function(){
       console.log('Request succeeded with JSON response', data);
       console.log(data)
       data.forEach(item => {
-        let datas = new Date(item.dataN)
-        let day = datas.getDate() + 1;
-        let month = datas.getMonth() + 1;
-        let year = datas.getFullYear();
-        if(day < 10){
-          day = String("0" + day)
-        }
-        if(month < 10){
-          month = String("0" + month)
-        }
         document.getElementById("result").innerHTML += `<tr> <td> </td> <td> ${item.nome} </td> <td> </td> <td> ${item.ramal} </td> <td>  </td> <td> </td> </tr>`;
       });
     })
